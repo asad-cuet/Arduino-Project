@@ -1,0 +1,20 @@
+Working of a Heartbeat Sensor
+The basic heartbeat sensor consists of a light-emitting diode and a detector like a light detecting resistor or a photodiode.
+The heartbeat pulses cause a variation in the flow of blood to different regions of the body.
+When tissue is illuminated with the light source, i.e. light emitted by the led, 
+it either reflects (a finger tissue) or transmits the light (earlobe). 
+Some of the light is absorbed by the blood and the transmitted or the reflected light is received by the light detector. 
+The amount of light absorbed depends on the blood volume in that tissue. 
+The detector output is in the form of the electrical signal and is proportional to the heartbeat rate.
+
+This signal is a DC signal relating to the tissues and the blood volume and the AC component synchronous with the 
+heartbeat and caused by pulsatile changes in arterial blood volume is superimposed on the DC signal. 
+Thus the major requirement is to isolate that AC component as it is of prime importance.
+
+HeartbeatTo achieve the task of getting the AC signal, the output from the detector is first filtered 
+using a 2 stage HP-LP circuit and is then converted to digital pulses using a comparator circuit or using simple ADC. 
+The digital pulses are given to a microcontroller for calculating the heartbeat rate, given by the formula-
+
+BPM(Beats per minute) = 60*f
+
+Where f is the pulse frequency
